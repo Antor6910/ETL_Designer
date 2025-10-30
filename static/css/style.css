@@ -1,0 +1,208 @@
+#etl-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+    margin: 25px 0 18px 0;
+    position: relative;
+    background: transparent;
+    z-index: 100;
+}
+
+.etl-sidebar-btn {
+    font-size: 1.18rem;
+    padding: 16px 38px;
+    min-width: 150px;
+    min-height: 44px;
+    border-radius: 9px;
+    background: #e2f4e5;
+    color: #186c29;
+    border: 2px solid #d2eedd;
+    transition: background 0.18s, color 0.18s, border 0.18s, box-shadow 0.12s;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px #e6e6e6;
+    margin-bottom: 0;
+}
+
+.etl-sidebar-btn:hover:not(:disabled), .etl-sidebar-btn:active:not(:disabled) {
+    background: #c2eccd;
+    color: #228B22;
+    border-color: #7ed69d;
+    box-shadow: 0 3px 12px #b7e2b7;
+}
+
+.etl-sidebar-btn:disabled {
+    opacity: 0.55 !important;
+    cursor: not-allowed !important;
+}
+
+#clear-pipeline, #upload-csv-btn {
+    font-size: 1.08rem;
+    padding: 10px 28px;
+    border-radius: 8px;
+    margin: 20px 0 0 0;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    display: block;
+}
+
+#clear-pipeline {
+    background: #c92a2a;
+    color: #fff;
+    border: 2px solid #a61b1b;
+    margin-bottom: 18px;
+    box-shadow: 1px 1px 5px #ffd6d6;
+}
+#clear-pipeline:hover:not(:disabled) {
+    background: #e03131;
+    color: #fff;
+    border-color: #a61b1b;
+}
+
+#upload-csv-btn {
+    background: #e5f1ff;
+    color: #186c29;
+    border: 1.5px solid #b7d7e2;
+}
+#upload-csv-btn:hover:not(:disabled) {
+    background: #d5e8ff;
+    color: #0070ad;
+}
+
+/* Pipeline canvas and result area remain as before */
+#etl-pipeline-canvas {
+    background: #f8fff8;
+    border-radius: 18px;
+    border: 2px solid #b7e2b7;
+    margin: 2em auto 0 auto;
+    width: 650px !important;
+    height: 390px !important;
+    min-width: 400px;
+    min-height: 250px;
+    transition: width 0.2s, height 0.2s;
+    position: relative;
+    box-shadow: 0 4px 18px #e3ffe3;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.etl-pipeline-step {
+    background: #35a94d;
+    color: #fff;
+    font-size: 1rem;
+    padding: 7px 22px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 8px #ddd;
+    cursor: move;
+    min-width: 70px;
+    min-height: 32px;
+    text-align: center;
+    margin: 0;
+    transition: box-shadow 0.15s, border 0.15s;
+    z-index: 10;
+    user-select: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.etl-pipeline-step.selected {
+    border: 2px solid #0070ad;
+    box-shadow: 0 0 8px #0070ad;
+}
+
+#results {
+    background: #f9fff9;
+    min-height: 110px;
+    padding: 22px 28px 24px 28px;
+    margin: 1.1em auto 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 2px 22px #e3ffe3;
+    border: 1.5px solid #b7e2b7;
+    width: 88vw;
+    max-width: 1200px;
+    font-size: 1.04rem;
+    word-break: break-word;
+    overflow-x: auto;
+    position: relative;
+    z-index: 2;
+}
+
+#results table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: #fafdff;
+    font-size: 0.98em;
+}
+#results th {
+    background: #e2f4e5;
+    color: #186c29;
+    padding: 6px 10px;
+    font-weight: 700;
+    border: 1px solid #b7e2b7;
+}
+#results td {
+    padding: 5px 10px;
+    border: 1px solid #ccf3d4;
+    background: #fcfffc;
+}
+
+.er-diagram {
+    max-width: 97%;
+    margin: 18px auto 12px auto;
+    display: block;
+    border: 1.5px solid #b7e2b7;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 14px #e3ffe3;
+}
+
+#results div[style*="color:#0070ad"] {
+    font-size: 1.07em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding-left: 2px;
+    border-left: 3.5px solid #0070ad;
+    background: #e5f1ff;
+    border-radius: 4px;
+}
+
+#results div[style*="color:red"] {
+    font-size: 1.07em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding-left: 2px;
+    border-left: 3.5px solid #d32f2f;
+    background: #ffecec;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    #etl-pipeline-canvas {
+        min-width: 260px;
+        width: 94vw !important;
+        height: 38vh !important;
+        min-height: 160px;
+    }
+    #results {
+        width: 99vw;
+        padding: 12px 5vw;
+    }
+    #etl-sidebar {
+        left: 0.4em;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
