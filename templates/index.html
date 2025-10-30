@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Premium ETL Pipeline Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://unpkg.com/jsplumb@2.15.6/dist/js/jsplumb.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>ETL Steps</h2>
+        <button class="etl-sidebar-btn" data-step="clean">Clean Data</button>
+        <button class="etl-sidebar-btn" data-step="fd">Functional Dependency</button>
+        <button class="etl-sidebar-btn" data-step="1nf">1NF</button>
+        <button class="etl-sidebar-btn" data-step="2nf">2NF</button>
+        <button class="etl-sidebar-btn" data-step="3nf">3NF</button>
+        <button class="etl-sidebar-btn" data-step="er">ER Diagram</button>
+        <hr>
+        <button class="etl-btn" id="clear-pipeline" style="background:#c62828;color:#fff;">Clear Pipeline</button>
+        <div style="height:20px"></div>
+        <label for="csvUpload" class="etl-btn" style="background:#f2f2f2;color:#228B22;border:1px solid #43bc68;cursor:pointer;">Upload CSV</label>
+        <input type="file" id="csvUpload" style="display:none;" accept=".csv">
+        <div id="csvFileName" style="margin-top:10px;font-weight:bold;"></div>
+    </div>
+    <div class="main">
+        <h1>Interactive ETL/ER Pipeline Designer</h1>
+        <div class="pipeline-canvas" id="etl-pipeline-canvas"></div>
+        <div id="results"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/etl_ui.js') }}"></script>
+</body>
+</html>
