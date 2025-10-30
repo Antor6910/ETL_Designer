@@ -55,12 +55,16 @@ You can showcase your project visually here 👇
 
 | Feature | Screenshot |
 |----------|-------------|
-| Home Interface | ![Home Screenshot](uploads/home_interface.png) |
-| Data Cleaning Step | ![Clean Data Screenshot](uploads/clean_data.png) |
-| Normalization Process | ![Normalization Screenshot](uploads/normalization_steps.png) |
-| ER Diagram Result | ![ER Diagram Screenshot](uploads/er_diagram.png) |
+| Home Interface | ![Clean Data Screenshot]<img width="1365" height="921" alt="clean_data" src="https://github.com/user-attachments/assets/fc75b87e-9f4d-4efa-baa8-3abeb3d4eab4" />
+) |
+| Step | ![ROADMAP](<img width="1365" height="921" alt="step" src="https://github.com/user-attachments/assets/7467cd20-9854-4510-9e1f-36825b4ba55e" />
+) |
+| Normalization Process | ![Normalization Screenshot](<img width="1365" height="921" alt="3NF" src="https://github.com/user-attachments/assets/246c4e16-4444-4ed1-b961-8697fda07cf3" />
+) |
+| ER Diagram Result | ![ER Diagram Screenshot](<img width="1365" height="921" alt="er" src="https://github.com/user-attachments/assets/ec5feb56-b207-477a-871f-0ca2f977aeba" />
+) |
 
-> 🖼️ *Upload your screenshots to the `/uploads` folder and replace the above paths accordingly.*
+
 
 ---
 
