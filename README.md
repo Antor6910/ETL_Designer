@@ -95,26 +95,46 @@ You can showcase your project visually here 👇
 
 ## 🧑‍💻 Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript / React.js  
+- **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Python (Flask)  
 - **Database:** MySQL  
-- **Visualization:** D3.js / Canvas / Custom JS  
+- **Visualization:** Custom JS  
 
 ---
 
 ## 🧩 Folder Structure
 
-```
+```plaintext
 ETL_Designer/
-│
-├── src/                     # Source code
-├── components/              # UI components (dropdown, steps, etc.)
-├── assets/                  # Images, icons
-├── uploads/                 # Screenshot upload section
-├── README.md                # Project documentation
-├── requirements.txt         # Python dependencies
-└── package.json             # Node.js dependencies (if applicable)
+├── app/
+│   └── app.py                 # Main Flask application and ETL logic
+├── static/
+│   ├── css/
+│   │   └── style.css          # Custom styles for the UI
+│   ├── js/
+│   │   └── ETL_UI.js          # Interactive ETL pipeline designer logic
+│   └── er_diagram/
+│       └── er_demo.txt        # Example ER diagram output storage
+├── templates/
+│   └── index.html             # Main HTML template for the web UI
+├── utils/
+│   ├── 1NF_Checker.py         # Functions for First Normal Form (1NF) checks
+│   ├── 2NF_Checker.py         # Functions for Second Normal Form (2NF) checks
+│   ├── 3NF_Checker.py         # Functions for Third Normal Form (3NF) checks
+│   ├── data_cleaning.py       # Data cleaning utilities
+│   └── er_generator.py        # ER diagram generator logic
+├── uploads/                   # Temporary uploaded CSV files (created at runtime)
+└── README.md                  # Project documentation (you're reading it!)
 ```
+
+**Highlights:**
+- **app/**: Contains the main backend Flask application.
+- **static/**: Static resources like CSS, JS, and generated ER diagrams.
+- **templates/**: HTML templates for Flask rendering.
+- **utils/**: Modular Python utilities for the ETL and database normalization workflow.
+- **uploads/**: Stores user-uploaded CSV files temporarily during processing.
+
+> This structure ensures clear separation of backend, frontend, and data processing logic, making the project easy to extend and maintain.
 
 ---
 
@@ -132,7 +152,7 @@ ETL_Designer/
 ## 🏁 Future Enhancements
 
 - [x] Add multi-table ER diagram relationships  
-- [ ] Enable CSV upload for sample data  
+- [ ] Enable CSV,Txt upload for sample data  
 - [ ] Provide export in multiple formats (PNG, PDF, JSON)  
 - [ ] Add undo/redo functionality for steps  
 - [ ] Include data preview for each normalization stage  
